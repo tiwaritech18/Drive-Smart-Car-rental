@@ -1,0 +1,17 @@
+
+.navbar{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px ;
+}
+.heading{
+  font-weight: 700;
+  color: #ee7116;
+}
+.navbar-li{
+  display: flex;
+  gap: 3rem;
+  font-size: 18px;
+}

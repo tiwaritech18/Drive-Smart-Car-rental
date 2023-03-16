@@ -1,0 +1,33 @@
+.rentcar{
+  display: flex;
+  color: white;
+  padding: 50px 10px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid  rgba(54, 53, 53, 0.204);
+  background-color: rgba(54, 53, 53, 0.204);
+  font-family: 'Prompt', sans-serif;
+}
+#search-button{
+  background-color: #ff4d30;
+  border: 2px solid #ff4d30;
+  box-shadow:  0 10px 15px 0 rgb(255 83 48 / 35%);;
+  padding: 0.3rem 2rem;
+  transition: all .3s;
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+}
+select{
+  padding: 5px;
+  font-size: large;
+}
+.rentcar input{
+  padding: 5px;
+  font-size: large;
+}
+.choose-inputs{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}

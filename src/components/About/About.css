@@ -1,0 +1,47 @@
+.about-cards{
+  color: white;
+  font-family: "Roboto" , sans-serif;
+  height: 80vh;
+  margin-top:200px
+
+}
+.about-cards h1{
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+.about{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-top: 100px;
+}
+.about-card-desc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid  rgba(54, 53, 53, 0.204);
+  background-color: rgba(54, 53, 53, 0.204);
+  margin: 20px;
+  padding: 20px; 
+}
+.about-card-desc p{
+  width: 80%;
+  text-align: center;
+}
+
+.about-card-desc img{
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+}
+.about-card-desc h3{
+  font-weight: 600;
+  font-size: 25px;
+  
+}
+.about-card-desc p{
+  color: rgba(251, 203, 203, 0.555);
+}
