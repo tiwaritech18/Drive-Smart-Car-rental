@@ -31,3 +31,8 @@ select{
   gap: 5px;
   align-items: center;
 }
+#error{
+  color: #ff4d30;
+  display: flex;
+  justify-content: center;
+}

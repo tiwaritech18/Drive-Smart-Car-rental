@@ -15,9 +15,7 @@ export default function Home(){
           </div>
         </div>
         <div className="img">
-          
-          <img src={car1} alt="" />
-           
+          <img src={car1} alt="" />       
         </div>
        
       </div>
