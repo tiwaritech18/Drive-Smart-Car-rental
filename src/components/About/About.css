@@ -27,6 +27,10 @@
   margin: 20px;
   padding: 20px; 
 }
+.about-card-desc:hover{
+   box-shadow: 9px 10px 101px -11px rgba(54,53,53,1);
+   
+}
 .about-card-desc p{
   width: 80%;
   text-align: center;

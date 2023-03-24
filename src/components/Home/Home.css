@@ -9,13 +9,17 @@
 .text{
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 30%;
   gap: 2rem;
 }
 .text h2{
   font-size: 42px;
   font-weight: 700;
 
+}
+.road{
+  font-weight: 700;
+  color: #ee7116;
 }
 
 
