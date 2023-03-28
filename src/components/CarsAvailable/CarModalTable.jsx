@@ -1,7 +1,8 @@
-export default function CarModalTable(props){
-  function handleReserve(){
-    
-  }
+
+
+
+export default function CarModalTable({selectedCar,handleReserveButton}){
+  
   return (
     <>
       <div>
@@ -12,7 +13,7 @@ export default function CarModalTable(props){
                 <span>Model: </span>
               </td>
               <td className="car-modal-table-col">
-                <span>{props.selectedCar && props.selectedCar.modal}</span>
+                <span>{selectedCar && selectedCar.modal}</span>
               </td>
             </tr>
             <tr className="car-modal-table-row">
@@ -20,7 +21,7 @@ export default function CarModalTable(props){
                 <span>Mark: </span>
               </td>
               <td className="car-modal-table-col">
-                <span>{props.selectedCar && props.selectedCar.mark}</span>
+                <span>{selectedCar && selectedCar.mark}</span>
               </td>
             </tr>
             <tr className="car-modal-table-row">
@@ -28,7 +29,7 @@ export default function CarModalTable(props){
                 <span>Year: </span>
               </td>
               <td className="car-modal-table-col">
-                <span>{props.selectedCar && props.selectedCar.year}</span>
+                <span>{selectedCar && selectedCar.year}</span>
               </td>
             </tr>
             <tr className="car-modal-table-row">
@@ -36,7 +37,7 @@ export default function CarModalTable(props){
                 <span>Transmission: </span>
               </td>
               <td className="car-modal-table-col">
-                <span>{props.selectedCar && props.selectedCar.transmission}</span>
+                <span>{selectedCar && selectedCar.transmission}</span>
               </td>
             </tr>
             <tr className="car-modal-table-row">
@@ -44,7 +45,7 @@ export default function CarModalTable(props){
                 <span>AC: </span>
               </td>
               <td className="car-modal-table-col">
-                <span>{props.selectedCar && props.selectedCar.AC}</span>
+                <span>{selectedCar && selectedCar.AC}</span>
               </td>
             </tr>
             <tr className="car-modal-table-row">
@@ -52,7 +53,7 @@ export default function CarModalTable(props){
                 <span>Fuel: </span>
               </td>
               <td className="car-modal-table-col">
-                <span>{props.selectedCar && props.selectedCar.fuel}</span>
+                <span>{selectedCar && selectedCar.fuel}</span>
               </td>
             </tr>
         </tbody>
@@ -60,7 +61,7 @@ export default function CarModalTable(props){
 
 
       </div>
-      <button className="reserve-button" onClick={handleReserve}>Reserve Now</button>
+      <button  className="reserve-button" onClick={handleReserveButton}>Reserve Now</button>
     </>
   )
 }

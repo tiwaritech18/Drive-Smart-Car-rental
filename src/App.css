@@ -39,3 +39,15 @@ ul, ol {
   padding: 15px;
   margin: 15px;
 }
+body::-webkit-scrollbar{
+  width: 0.7rem; 
+}
+body::-webkit-scrollbar-track{
+  background: black;
+  border-radius: 100vw;
+  margin-block: .5em;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #ee7116;
+  border-radius: 100vw;
+}

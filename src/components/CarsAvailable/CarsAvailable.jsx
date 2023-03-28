@@ -3,10 +3,17 @@ import Cars from "./Cars.js";
 import CarsImage from "./CarsImage";
 import { useState } from "react";
 import CarModalTable from "./CarModalTable";
+import { useNavigate } from "react-router-dom";
 
 
 
 export default function CarsAvailable(){
+  const navigate=useNavigate();
+  function handleReserveButton(){   
+    navigate('./rentcar')
+    setShowCar(false)
+    window.scrollTo({top:0,behavior:'smooth'})
+  }
   const [carImage,setCarImage]=useState("")
 const [selectedCar,setSelectedCar] =useState({
     id:1,
@@ -39,40 +46,44 @@ const [showCar,setShowCar]=useState(false);
     setShowCar(false);
   }
   return (
-    <div className="container">
-      <div className="content">
-        <div className="cars-available">
-          <div className="description">
-            <h3>Vehicle Models</h3>
-            <h1>Our rental fleet</h1>
-            <p>Choose from a variety of our amazing vehicles to rent for your next adventure or buisness trip</p>
-          </div>
-          {Cars.map((car) => (
-            <div className="cars" key={car.name}>
-              <div className="cars-name">
-                <button id="cars-button" value={car.name} onClick={() => handleClick(car.name)}>{car.name}</button>
-              </div>
-          </div>
-          ))}
-              
-            
-              <div className={`modal ${showCar ? "show" : "hide"}`} onClick={handleCloseModal}>
-              <div className="modal-data" onClick={(e) => e.stopPropagation()}>
-                
-           
-                <div className="car-specification">
-                  <CarsImage imageURL={carImage}/>
-                  
-                  <div className="car-modal-table">
-                    <p>{selectedCarPrice}</p>
-                    <CarModalTable selectedCar={selectedCar}/>
+    <section className="cars-available-section">
+      <div className="container">
+        <div className="content">
+          <div className="cars-available">
+            <div className="description">
+              <h3>Vehicle Models</h3>
+              <h1>Our rental fleet</h1>
+              <p>Choose from a variety of our amazing vehicles to rent for your next adventure or buisness trip</p>
+            </div>
+            {Cars.map((car) => (
+              <div className="cars" key={car.name}>
+                <div className="cars-name">
+                  <button id="cars-button" value={car.name} onClick={() => handleClick(car.name)}>{car.name}</button>
+                </div>
+            </div>
+            ))}
+      
+      
+                <div className={`modal ${showCar ? "show" : "hide"}`} onClick={handleCloseModal}>
+                <div className="modal-data" onClick={(e) => e.stopPropagation()}>
+      
+      
+                  <div className="car-specification">
+                    <CarsImage imageURL={carImage}/>
+      
+                    <div className="car-modal-table">
+                      <p>{selectedCarPrice}</p>
+                      <CarModalTable 
+                      selectedCar={selectedCar}
+                      handleReserveButton={handleReserveButton}
+                      />
+                      </div>
                     </div>
                   </div>
-                  
                 </div>
               </div>
-            </div>
+          </div>
         </div>
-      </div>
+    </section>
   )
 }

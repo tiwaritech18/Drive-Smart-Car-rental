@@ -1,12 +1,15 @@
 import { useState } from "react";
 import Cars from "../CarsAvailable/Cars"
+import CarDetails from "./CarDetails";
 import "./Rentcar.css";
+
 
 export default function Rentcar(){
   const [carType,setCarType]=useState('');
   const [startDate,setStartDate]=useState('');
   const [endDate,setEndDate]=useState('');
   const [errorMessage,setErrorMessage]=useState(null);
+  const [showModal,setShowModal]=useState(false);
 
   function handleCarType(e){
     setCarType(e.target.value)
@@ -28,10 +31,14 @@ export default function Rentcar(){
     }
     else{
       setErrorMessage("")
+      setShowModal(true);
     }
     console.log(carType)
     console.log(startDate)
     console.log(endDate)
+  }
+  function handleCLose(){
+    setShowModal(false)
   }
 
   return (
@@ -70,6 +77,13 @@ export default function Rentcar(){
           <button id="search-button" onClick={handleSearch}>Search</button>
         </div>
         {errorMessage && <p id="error">{errorMessage}</p> }
+        {showModal&& (
+        <CarDetails 
+        carType={carType}
+        startDate={startDate}
+        endDate={endDate}
+        onClose={handleCLose}
+        carImg={Cars.imgSrc}/>)}
     </div>
   )
 }
