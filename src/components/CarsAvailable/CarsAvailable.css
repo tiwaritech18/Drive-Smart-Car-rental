@@ -77,8 +77,11 @@
 }
 .cars-available-section{
   background: url("https://car-rental-ten.vercel.app/static/media/car.5e21eedbea3280311aff.png");
-  background-position: 0.70%;
+  background-position: 0.70% 20%;
   background-repeat:no-repeat;
+}
+.cars-available{
+  margin-bottom: 3rem;
 }
 
 /* Car Modal Table */
@@ -134,3 +137,31 @@
   background-color: #d53820;
   color: #fff;
 }
+/* banner section  */
+
+
+.banner-section{
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  padding: 3rem;
+  font-size: larger;
+}
+.banner-section h1{
+  font-weight: bolder;
+  font-size: 70px;
+}
+.banner-section h1 span{
+  color: #ff4d30;
+}
+.banner-section h4{
+  font-weight: 600;
+}
+.banner-section h4 span{
+  color: #ff4d30;
+}
+.banner-cars{
+  text-align: center;
+  margin: 3rem;
+}
+/*  */

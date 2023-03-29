@@ -1,0 +1,72 @@
+footer{
+  position: relative;
+}
+.contact{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+#h4{
+  color: rgb(233, 217, 217);
+  font-weight: bold;
+  font-size: 17px;
+}
+.contact-address li{
+  color: wheat;
+}
+.contact-links ul{
+  display: flex;
+  gap:0.5rem;
+  margin-bottom:1rem;
+}
+.contact-links li:hover{
+  color: wheat;
+  cursor: pointer;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+}
+.subscribe-section{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-email{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sub-button{
+  background-color: #ff4d30;
+  border: 2px solid #ff4d30;
+  box-shadow:  0 10px 15px 0 rgb(255 83 48 / 35%);;
+  padding: 0.5rem 1rem;
+  transition: all .3s;
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+}
+input{
+  outline: none;
+  border: 0;
+ box-shadow:  0 10px 15px 0 rgb(255 83 48 / 35%);;
+  padding: 0.5rem 1rem;
+  transition: all .3s;
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+}
+#upto-top{
+  padding: 5px;
+  background-color: #ff4d30;
+  outline: none;
+  border: none;
+  position: absolute;
+  right: 25px;
+  top: 320px;
+  cursor: pointer;
+  
+}

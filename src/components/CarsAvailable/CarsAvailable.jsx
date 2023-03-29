@@ -34,7 +34,7 @@ const [showCar,setShowCar]=useState(false);
 
   function handleClick(carname){
     const selectedCarObject=Cars.find((car) => {
-      return car.name==carname;
+      return car.name===carname;
     })
     
     setSelectedCar(selectedCarObject);
@@ -83,6 +83,13 @@ const [showCar,setShowCar]=useState(false);
                 </div>
               </div>
           </div>
+        </div>
+        <div className="banner-section">
+          <h1>Save Big with our <span>Cheap</span> Car rental!</h1>
+          <h4>Top Airports. Local Suppliers. <span>24/7</span> Support.</h4>
+        </div>
+        <div className="banner-cars">
+          <img src="https://car-rental-ten.vercel.app/static/media/main.70cd75042bdf42515d92.png" alt="" />
         </div>
     </section>
   )

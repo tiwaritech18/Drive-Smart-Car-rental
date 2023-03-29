@@ -1,0 +1,60 @@
+.testimonial-section{
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+}
+.tes-heading{
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 5rem;
+
+}
+.tes-heading h3{
+  font-weight: 700;
+  font-size: larger;
+}
+.tes-heading h2{
+  font-weight: 900;
+  font-size: 50px;
+}
+.tes-heading p{
+  color: rgba(206, 193, 193, 0.991);
+  font-size: large;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.testimonial-cards{
+  display: flex;
+
+}
+.card-container{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 1rem;
+  border: 1px solid rgba(54, 53, 53, 0.204);
+  background-color: rgba(54, 53, 53, 0.204);
+  padding: 30px;
+  max-width: 45%;
+}
+.card-container:hover{
+  box-shadow: 9px 10px 101px -11px rgba(54,53,53,1);
+}
+.card-container p{
+  font-family: cursive;
+  font-size: 18px;
+  color: salmon;
+}
+.user-id img{
+  border-radius:50% ;
+  height: 100px;
+  width: 100px;
+}
+.user-id{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.user-id h3{
+  font-weight: bold;
+}
