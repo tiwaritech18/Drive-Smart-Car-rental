@@ -10,9 +10,18 @@ export default function Rentcar(){
   const [endDate,setEndDate]=useState('');
   const [errorMessage,setErrorMessage]=useState(null);
   const [showModal,setShowModal]=useState(false);
+  const [selectedCarObject, setSelectedCarObject] = useState(null);
+
+  function handleCarname(carname){
+    const selectedCarObject = Cars.find((car) => {
+      return car.name === carname;
+    });
+    setSelectedCarObject(selectedCarObject);
+  }
 
   function handleCarType(e){
     setCarType(e.target.value)
+    
   }
 
   function handleStartDate(e){
@@ -36,6 +45,7 @@ export default function Rentcar(){
     console.log(carType)
     console.log(startDate)
     console.log(endDate)
+    
   }
   function handleCLose(){
     setShowModal(false)
@@ -63,6 +73,7 @@ export default function Rentcar(){
                 id="startDate" 
                 value={startDate} 
                 onChange={handleStartDate}
+                onClick={() => handleCarname(carType)}
             />
           </div>
           <div className="choose-inputs">
@@ -83,7 +94,8 @@ export default function Rentcar(){
         startDate={startDate}
         endDate={endDate}
         onClose={handleCLose}
-        carImg={Cars.imgSrc}/>)}
+        carimg={selectedCarObject.imgSrc}
+        />)}
     </div>
   )
 }

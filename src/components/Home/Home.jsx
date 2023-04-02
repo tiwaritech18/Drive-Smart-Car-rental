@@ -1,6 +1,12 @@
+import About from "../About/About";
+import CarsAvailable from "../CarsAvailable/CarsAvailable";
+import FaqSection from "../FaqSection/FaqSection";
+import Footer from "../Footer/Footer";
+import Rentcar from "../Rentcar/Rentcar";
+import Testimonial from "../Testimonials/Testimonial";
 import "./Home.css";
 import car1 from "./car1.png"
-import { Outlet } from "react-router-dom";
+
 
 export default function Home(){
   return (
@@ -9,7 +15,7 @@ export default function Home(){
       <div className="home ">
         <div className="text">
           <h2>Hit the <span className="road">road </span>with confidence </h2>
-          <p>DriveSmart Car Rental Service offers safe and responsible car rentals, with real-time feedback on your driving performance to help you become a better driver. Enjoy a wide selection of vehicles and customize your rental experience to fit your needs, all while driving with confidence and peace of mind.</p>
+          <p>Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.</p>
           <div className="button">
              <button>Book Ride</button>
           </div>
@@ -19,7 +25,12 @@ export default function Home(){
         </div>    
       </div>
     </div>
-    <Outlet />
+    <Rentcar />
+    <About />
+    <CarsAvailable />
+    <Testimonial />
+    <FaqSection />
+
     </>
   )
 }
