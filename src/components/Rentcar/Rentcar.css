@@ -22,9 +22,10 @@ select{
   padding: 5px;
   font-size: large;
 }
-.rentcar input{
+input[type="date"]{
   padding: 5px;
   font-size: large;
+  
 }
 .choose-inputs{
   display: flex;
